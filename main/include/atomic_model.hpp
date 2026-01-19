@@ -17,7 +17,7 @@ struct atomic_modelState {
 
 #ifndef NO_LOGGING
 std::ostream& operator<<(std::ostream &out, const atomic_modelState& state) {
-    out  << "{" << state.sigma << "}";
+    out  << "{sigma: " << state.sigma << "}";
     return out;
 }
 #endif
@@ -50,7 +50,7 @@ class atomic_model : public Atomic<atomic_modelState> {
 
     // time_advance function
     [[nodiscard]] double timeAdvance(const atomic_modelState& state) const override {     
-            return state.sigma;
+        return state.sigma;
     }
 };
 
