@@ -9,8 +9,8 @@ using namespace cadmium;
 struct top_coupled : public Coupled {
 
     /**
-     * Constructor function for the blinkySystem model.
-     * @param id ID of the blinkySystem model.
+     * Constructor function for the top model.
+     * @param id ID of the top model.
      */
     top_coupled(const std::string& id) : Coupled(id) {
         auto atomic_1 = addComponent<atomic_model>("model 1");
